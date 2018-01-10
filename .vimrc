@@ -5,6 +5,9 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4
 set number relativenumber
 set hlsearch
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 set nocompatible
 filetype off
 
