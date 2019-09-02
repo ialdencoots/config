@@ -18,6 +18,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 filetype plugin indent on
@@ -27,3 +29,5 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
 let NERDTreeIgnore = ['\.pyc$']
+
+set belloff=all
