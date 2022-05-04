@@ -20,6 +20,7 @@ Plugin 'henrik/vim-indexed-search'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'psf/black'
 
 call vundle#end()
 filetype plugin indent on
@@ -31,3 +32,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
 set belloff=all
+
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
