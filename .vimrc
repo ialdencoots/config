@@ -2,6 +2,7 @@ set expandtab smarttab
 set tabstop=4 shiftwidth=4
 autocmd FileType elm setlocal tabstop=2 shiftwidth=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4
 set number relativenumber
 set hlsearch
 
@@ -21,6 +22,8 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'psf/black'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,3 +40,6 @@ augroup black_on_save
   autocmd!
   autocmd BufWritePre *.py Black
 augroup end
+
+syntax on
+filetype plugin indent on
